@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=900px, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SustainabilityCheck</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+    <script src="eva.js"></script>
+  </head>
+  <body>
+      <div class="flex-container">
+          <div class="grid-container menu">
+              <a href="index.html">Home</a>
+              <a href="eva.html">Auswertung</a>
+              <a href="info.html">Informationen</a>
+          </div>
+      
+          <div class="header">
+            <img src="img/banner.png" style="width: 100%;" alt='SustainabilityCheck - Wie nachhaltig bist du?'>
+          </div>
+
+        <div class="content">
+          <h2>Home</h2>
+          <p> 
+            Diese Seite dient dazu, die tägliche Lebensweise mit den Sustainable Development Goals der UN abzugleichen.
+          </p>
+          <br>
+          <br>
+          <table cellspacing="0" cellpadding="0" border="0">
+              <colgroup>
+                  <col width="50%">
+                  <col width="50%">
+              </colgroup>
+              <tr>
+                  <td style="border-right:1px solid black;"> 
+          <h3>Transportationswege</h3>
+          <p> 
+              Hier kann die täglich zurückgelegte Strecke angegeben werden.
+          </p>
+          <br>
+          <div class="inp">
+              <label id="l_transport">Eingabe :</label>
+                <input id="inputKm" placeholder="Anzahl gefahrene km "></input>
+                <select id="MeansOfTransportationList" placeholder="Transportmittel">
+                  <option value="Auto (V)">Auto (V)</option>
+                  <option value="Auto (E)">Auto (E)</option>
+                  <option value="Flugzeug">Flugzeug</option>
+                  </select>
+            <button class="button"id="kmButton">Vergleich starten </button>
+          </div>
+          <br>
+          <br>
+          <div class="eva">
+            <b> Auswertung der gefahrenen km:</b> <br />
+            <!--<textarea id="tranportEvaOut" ></textarea>-->
+            <label id="tranportEvaOut"> </textarea>
+          
+         
+          <script>
+            //console.log("Script touched")
+            document.getElementById("kmButton").addEventListener("click", doSomething);
+            function doSomething(){
+              //console.log("Button Clicked")
+              //console.log(document.getElementById("inputKm").value +"; "+ document.getElementById("MeansOfTransportationList").options[document.getElementById("MeansOfTransportationList").selectedIndex].value);
+              var result = evaluateTransport(document.getElementById("inputKm").value, document.getElementById("MeansOfTransportationList").options[document.getElementById("MeansOfTransportationList").selectedIndex].value);
+              //console.log("index.html: " + result);
+              showTransportEva(result);
+              //console.log(document.getElementById("tranportEvaOut"));
+           } 
+           </script> 
+           </div>
+          </td> <td> 
+          <h3>Stresslevel</h3>
+          <p> 
+            Hier kann das momentane Stresslevel auf einer Skala von 0-10 angegeben werden.
+            10 ist hierbei ein deutlich erhöhtes Stresslevel. 0 ist ein tiefenentspannter Zustand.
+          </p>
+          <br>
+          <div class="inp">
+            <label id="l_stress">Skala :</label>
+            <input type="range" class="slider" id="inputStress" min="0" max="10" ></input>  
+            <button class="button" id="stressButton">Vergleich starten</button>
+          </div>
+          <br>
+          <br>
+          <div class="eva">
+           <b> Auswertung des Stresslevels:</b> <br />
+            <!--<textarea id="tranportEvaOut" ></textarea>-->
+            <label id="stressEvaOut"> </textarea>
+          </div>
+        
+        <script>
+           document.getElementById("stressButton").addEventListener("click", startStressEva)
+           function startStressEva(){
+             console.log("StressButton Clicked")
+             console.log("StressTest: "+document.getElementById("inputStress").value)
+              var result = evaluateStress(document.getElementById("inputStress").value);
+              showStressEva(result);
+           }
+        </script>
+          </td>
+        </tr>
+        </table>
+        </div>
+      
+      <div class="footer">  
+          <p>
+            <img src="img/logo.png" style="height: 20px; scale: 1;" /> Erstellt von Yannic Schalk und Sven Zilius
+          </p>
+      </div>
+      </div>
+    
+  </body>
+</html>

@@ -1,0 +1,185 @@
+body {
+  background-color: #bafab8;
+  background-color: #23e450;
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
+  margin: 0px;
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  width: 100vw;
+
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #67cc5e;
+  background-color: #23e450;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.menu {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+.menu > a {
+  width: 100%;
+  background-color: #52a64b;
+  background-color: #282928;
+  border-color: #7d807d;
+  border-top-style: none;
+  border-right-style: groove;
+  border-bottom-style: groove;
+  border-left-style: groove;
+  text-align: center;
+  color: #7d807d;
+  font-size: 25px;
+  padding: 10px 0px;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+}
+
+.content {
+  margin: 0px 15px;
+  font-size: 24px;
+}
+
+.content > p {
+  margin: 0px 25px;
+}
+
+.inp {
+  margin: 5px 35px;
+  text-align: left;
+  font-size: 24px;
+}
+
+.eva {
+  margin: 0px 35px 40px;
+  text-align: left;
+}
+
+.endl {
+  padding: 0px 0px 100px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #7d807d;
+  background-color: #282928;
+  border-color: #7d807d;
+  border-top-style: none;
+  border-right-style: groove;
+  border-bottom-style: none;
+  border-left-style: groove;
+}
+
+.footer > p {
+  padding: 5px 0px;
+  font-size: 20px;
+}
+
+table {
+  padding: 0px 0px 100px;
+}
+
+tr {
+  width: 80vw;
+}
+
+td {
+  vertical-align: top;
+}
+
+td > p {
+  padding: 0px 25px;
+}
+
+input {
+  height: 24px;
+  width: 300px;
+  font-size: 24px;
+  text-align: right;
+}
+
+select {
+  height: 30px;
+  width: 200px;
+  font-size: 24px;
+}
+.slider {
+  height: 14px;
+  width: 55%;
+  min-width: 400px;
+}
+
+button {
+  /*font-size: 20px;*/
+  border-radius: 8px;
+  border: none;
+  background-color: #67cc5e;
+  padding: 10px;
+  font-style: ;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #b700ff;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+hr {
+  border-color: #000000;
+  width: 100%;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 24px;
+}
