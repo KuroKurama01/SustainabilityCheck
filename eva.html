@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>SustainabilityCheck</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="eva.js"></script>
   </head>
   <body>
     <div class="flex-container">
@@ -29,6 +30,29 @@
           src="https://th.bing.com/th/id/R.efea193ee9c3c69fbd955804fcbc14d9?rik=mUDVF0tyvEE%2fug&riu=http%3a%2f%2fwww.ec-zirl.at%2fwp-content%2fuploads%2f2020%2f03%2fHP_UnderConstruction.png&ehk=54jsf%2bHgUQM5S55f1BZ%2bJLNbDzrwd9djup0j21DDnjc%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
           style="width: 95vw; min-width: 330px;"
         />
+        <button class="button" id="update">Auswertung generieren</button>
+        <table cellspacing="0" cellpadding="0" border="0">
+          <colgroup>
+            <col width="50%" />
+            <col width="50%" />
+          </colgroup>
+          <tr>
+            <td style="border-right: 1px solid black;">
+              <div id="TransEvaOutSpan">
+                <script>
+                  showTransEvaSpan();
+                </script>
+              </div>
+            </td>
+            <td>
+              <div id="StressEvaOutSpan">
+                <script>
+                  showStressEvaSpan();
+                </script>
+              </div>
+            </td>
+          </tr>
+        </table>
       </div>
       <div class="endl"></div>
       <div class="footer">
@@ -39,5 +63,15 @@
       </div>
     </div>
   </body>
-  <script src="eva.js"></script>
+  <script>
+    //console.log("Script touched")
+    document.getElementById("update").addEventListener("click", doSomething);
+    function doSomething() {
+      console.log("Button Clicked");
+      document.getElementById("TransEvaOutSpan").innerHTML = "";
+      document.getElementById("StressEvaOutSpan").innerHTML = "";
+      showTransEvaSpan();
+      showStressEvaSpan();
+    }
+  </script>
 </html>
