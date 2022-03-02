@@ -1,0 +1,6 @@
+Was zu testen ist:
+
+Funktionieren alle Links? (auf andere Teile der Seite, auf andere Seiten)
+Wird die Eingabe gefiltert? (nur der richtige Datentyp, nur sinnvolle Daten)
+Machen alle Elemente das, was man von ihnen erwartet? (Buttons, andere Anzeigeelemente, Links)
+Kann man sich mehrere/einzelne Dinge zeitgleich ansehen? (nur Tranport, nur Stress, beides)
