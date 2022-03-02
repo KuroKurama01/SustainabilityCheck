@@ -71,8 +71,12 @@
       //console.log("Button Clicked");
       document.getElementById("TransEvaOutSpan").innerHTML = "";
       document.getElementById("StressEvaOutSpan").innerHTML = "";
-      showTransEvaSpan();
-      showStressEvaSpan();
+      try {
+        showTransEvaSpan();
+      } catch {}
+      try {
+        showStressEvaSpan();
+      } catch {}
     }
   </script><script>
     //console.log("Script touched")
