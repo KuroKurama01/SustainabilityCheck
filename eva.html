@@ -53,6 +53,7 @@
             </td>
           </tr>
         </table>
+        <button class="button" id="delete">Auswertung löschen</button>
       </div>
       <div class="endl"></div>
       <div class="footer">
@@ -67,11 +68,20 @@
     //console.log("Script touched")
     document.getElementById("update").addEventListener("click", doSomething);
     function doSomething() {
-      console.log("Button Clicked");
+      //console.log("Button Clicked");
       document.getElementById("TransEvaOutSpan").innerHTML = "";
       document.getElementById("StressEvaOutSpan").innerHTML = "";
       showTransEvaSpan();
       showStressEvaSpan();
+    }
+  </script><script>
+    //console.log("Script touched")
+    document.getElementById("delete").addEventListener("click", doSomething);
+    function doSomething() {
+      //console.log("Button Clicked");
+      document.getElementById("TransEvaOutSpan").innerHTML = "";
+      document.getElementById("StressEvaOutSpan").innerHTML = "";
+      sessionStorage.clear();
     }
   </script>
 </html>
