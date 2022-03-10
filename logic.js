@@ -1,6 +1,6 @@
-var maxkm_v = 3;
-var maxkm_e = 2;
-var maxkm_f = 1;
+var maxkm_v = 400;
+var maxkm_e = 600;
+var maxkm_f = 100;
 var evaOutput = "";
 
 function evaluateTransport(i_km, means_name) {
